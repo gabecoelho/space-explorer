@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zR7-QL-jd9">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--People In Space Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PeopleInSpaceScreen" customModule="TheSpaceExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="aF3-sF-1ag">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv0-O5-Ura">
+                                <rect key="frame" x="101" y="467" width="208" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="emD-we-gD5"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="iss"/>
+                                <connections>
+                                    <segue destination="auz-oL-mDl" kind="show" id="TaP-7C-Xbh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many astronauts in space right now?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-77-PVG">
+                                <rect key="frame" x="35" y="91" width="340" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCB-CK-TuT">
+                                <rect key="frame" x="103" y="120" width="208" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="ibK-WM-EKq"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="astronauts"/>
+                                <connections>
+                                    <segue destination="lfd-ym-AyM" kind="show" id="fvs-88-B1A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the ISS?" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMJ-Bw-ByY">
+                                <rect key="frame" x="129" y="420" width="156" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="hYN-iD-asx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="qCB-CK-TuT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="120" id="1ng-Ol-IpA"/>
+                            <constraint firstItem="cv0-O5-Ura" firstAttribute="top" secondItem="YMJ-Bw-ByY" secondAttribute="bottom" constant="8" symbolic="YES" id="2NF-wI-V68"/>
+                            <constraint firstItem="YMJ-Bw-ByY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="5UP-Dt-gkN"/>
+                            <constraint firstItem="cv0-O5-Ura" firstAttribute="centerX" secondItem="nSc-77-PVG" secondAttribute="centerX" id="ElL-4p-mle"/>
+                            <constraint firstItem="YMJ-Bw-ByY" firstAttribute="centerX" secondItem="qCB-CK-TuT" secondAttribute="centerX" id="FYX-Kf-UaS"/>
+                            <constraint firstItem="aF3-sF-1ag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G8y-rn-kBc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aF3-sF-1ag" secondAttribute="trailing" id="GdB-ls-Z1z"/>
+                            <constraint firstItem="aF3-sF-1ag" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="I2H-FQ-3kk"/>
+                            <constraint firstItem="qCB-CK-TuT" firstAttribute="centerX" secondItem="aF3-sF-1ag" secondAttribute="centerX" id="Oxz-IW-UKq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cv0-O5-Ura" secondAttribute="trailing" constant="105" id="XKw-ab-3E1"/>
+                            <constraint firstItem="cv0-O5-Ura" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="gc0-1O-q8o"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="aF3-sF-1ag" secondAttribute="bottom" id="i4t-mI-RyJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cv0-O5-Ura" secondAttribute="bottom" constant="80" id="rAC-16-8Y3"/>
+                            <constraint firstItem="qCB-CK-TuT" firstAttribute="top" secondItem="nSc-77-PVG" secondAttribute="bottom" constant="8" symbolic="YES" id="xkb-HA-dAO"/>
+                            <constraint firstItem="qCB-CK-TuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="xyx-Qf-XaG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dBy-bH-PzY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="26.90217391304348"/>
+        </scene>
+        <!--People In Space Screen-->
+        <scene sceneID="ZgZ-EK-qAk">
+            <objects>
+                <viewController id="lfd-ym-AyM" customClass="PeopleInSpaceScreen" customModule="TheSpaceExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bF5-jw-duh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4e7-3v-6JC">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sergey Prokopyev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8u-dh-VHT">
+                                <rect key="frame" x="20" y="161" width="195" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h1a-3a-TIH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are 3 astronauts in space:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8P-KL-08s">
+                                <rect key="frame" x="20" y="123" width="263" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexander Gerst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crg-uH-CDY">
+                                <rect key="frame" x="20" y="258" width="195" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="jGc-oo-VOB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serena Aunon-Chancellor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pww-ah-2Y3">
+                                <rect key="frame" x="20" y="209" width="205" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="qHx-qg-FwP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="crg-uH-CDY" firstAttribute="top" secondItem="pww-ah-2Y3" secondAttribute="bottom" constant="8" symbolic="YES" id="6A4-Tb-IwT"/>
+                            <constraint firstItem="4e7-3v-6JC" firstAttribute="leading" secondItem="06Z-sU-K29" secondAttribute="leading" id="L5R-R0-QRI"/>
+                            <constraint firstItem="crg-uH-CDY" firstAttribute="leading" secondItem="bF5-jw-duh" secondAttribute="leadingMargin" id="O1q-Kq-QBo"/>
+                            <constraint firstItem="4e7-3v-6JC" firstAttribute="top" secondItem="bF5-jw-duh" secondAttribute="topMargin" id="Qem-Ld-anu"/>
+                            <constraint firstItem="pww-ah-2Y3" firstAttribute="top" secondItem="B8u-dh-VHT" secondAttribute="bottom" constant="8" symbolic="YES" id="UbP-9y-b1P"/>
+                            <constraint firstItem="B8u-dh-VHT" firstAttribute="leading" secondItem="F8P-KL-08s" secondAttribute="leading" id="Ubu-GW-V19"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4e7-3v-6JC" secondAttribute="bottom" id="Wpr-N6-j2Q"/>
+                            <constraint firstItem="B8u-dh-VHT" firstAttribute="trailing" secondItem="crg-uH-CDY" secondAttribute="trailing" id="cNg-ke-QkG"/>
+                            <constraint firstItem="06Z-sU-K29" firstAttribute="trailing" secondItem="crg-uH-CDY" secondAttribute="trailing" constant="199" id="ejn-1E-8yM"/>
+                            <constraint firstItem="crg-uH-CDY" firstAttribute="leading" secondItem="pww-ah-2Y3" secondAttribute="leading" id="fep-k4-hPb"/>
+                            <constraint firstItem="crg-uH-CDY" firstAttribute="leading" secondItem="F8P-KL-08s" secondAttribute="leading" id="vXZ-1z-VQB"/>
+                            <constraint firstItem="F8P-KL-08s" firstAttribute="top" secondItem="06Z-sU-K29" secondAttribute="top" constant="59" id="yN2-58-wZQ"/>
+                            <constraint firstItem="06Z-sU-K29" firstAttribute="trailing" secondItem="4e7-3v-6JC" secondAttribute="trailing" id="z2z-tS-I1P"/>
+                            <constraint firstItem="06Z-sU-K29" firstAttribute="bottom" secondItem="crg-uH-CDY" secondAttribute="bottom" constant="437" id="zDm-wN-J2C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="06Z-sU-K29"/>
+                    </view>
+                    <connections>
+                        <outlet property="astrosInSpace" destination="F8P-KL-08s" id="Dmi-7p-Moy"/>
+                        <outlet property="astrosLabel" destination="crg-uH-CDY" id="k6J-5z-a6I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IP-V3-uor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="-280.43478260869568"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0R-FN-4nK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zR7-QL-jd9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UhK-TS-fVJ">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LA1-5u-KUB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ged-Ug-laU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="27"/>
+        </scene>
+        <!--Location In Space Screen-->
+        <scene sceneID="h08-CF-y91">
+            <objects>
+                <viewController id="auz-oL-mDl" customClass="LocationInSpaceScreen" customModule="TheSpaceExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g8j-2V-q99">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qof-t3-ZrR">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISS Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIb-Ei-0bn">
+                                <rect key="frame" x="20" y="123" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: 166.1643" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooD-8B-WVp">
+                                <rect key="frame" x="20" y="161" width="195" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="HS8-4p-D3O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude: 42.6748" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6X-bm-Pj2">
+                                <rect key="frame" x="20" y="197" width="195" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="WQ8-vJ-KhS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bjj-eH-YbW" firstAttribute="trailing" secondItem="qof-t3-ZrR" secondAttribute="trailing" id="IzJ-89-AcF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qof-t3-ZrR" secondAttribute="bottom" id="LYN-rO-h9H"/>
+                            <constraint firstItem="bIb-Ei-0bn" firstAttribute="leading" secondItem="g8j-2V-q99" secondAttribute="leadingMargin" id="NNv-Ct-mYC"/>
+                            <constraint firstItem="ooD-8B-WVp" firstAttribute="top" secondItem="bIb-Ei-0bn" secondAttribute="bottom" constant="17" id="Rab-3A-Pfc"/>
+                            <constraint firstItem="D6X-bm-Pj2" firstAttribute="top" secondItem="bIb-Ei-0bn" secondAttribute="bottom" constant="53" id="Xml-fq-3pO"/>
+                            <constraint firstItem="Bjj-eH-YbW" firstAttribute="trailing" secondItem="ooD-8B-WVp" secondAttribute="trailing" constant="199" id="YJV-P7-gA9"/>
+                            <constraint firstItem="ooD-8B-WVp" firstAttribute="leading" secondItem="bIb-Ei-0bn" secondAttribute="leading" id="ZhM-tc-NTB"/>
+                            <constraint firstItem="qof-t3-ZrR" firstAttribute="leading" secondItem="Bjj-eH-YbW" secondAttribute="leading" id="bba-Xh-wec"/>
+                            <constraint firstItem="qof-t3-ZrR" firstAttribute="top" secondItem="g8j-2V-q99" secondAttribute="topMargin" id="ibh-lP-UVI"/>
+                            <constraint firstItem="ooD-8B-WVp" firstAttribute="trailing" secondItem="D6X-bm-Pj2" secondAttribute="trailing" id="qC0-Ai-Rl5"/>
+                            <constraint firstItem="bIb-Ei-0bn" firstAttribute="top" secondItem="Bjj-eH-YbW" secondAttribute="top" constant="59" id="qok-Hr-dGU"/>
+                            <constraint firstItem="ooD-8B-WVp" firstAttribute="leading" secondItem="D6X-bm-Pj2" secondAttribute="leading" id="tJl-9n-Bt5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bjj-eH-YbW"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="ooD-8B-WVp" id="axM-vh-alp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82K-Pv-FBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="422.28260869565219"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="astronauts" width="491.51998901367188" height="445.44000244140625"/>
+        <image name="background" width="750" height="1334"/>
+        <image name="iss" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
+</document>
